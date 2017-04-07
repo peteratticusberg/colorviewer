@@ -6,17 +6,17 @@
     </style>
   </head>
   <body>
+    <p> Paste in a list of colors in the format '#xxxxxx' delimited by whitespace. </p>
     <textarea id="input"></textarea>
     <button id="submit" onClick="onSubmit()">submit</button>
     <div id="output"></div>
     <span id="hello"></span>
     <script>
       function onSubmit() {
-        console.log("running on submit")
         var input = document.getElementById('input').value;
         var colors = input.split(/\s/);
         var outputDiv = document.getElementById('output')
-        document.getElementById('output').innerHtml = "";
+        document.getElementById('output').innerHtml = ""; // don't know why this won't work, for now just refresh the page...
         console.log(colors)
         for (i = 0; i < colors.length; i += 1){
             
